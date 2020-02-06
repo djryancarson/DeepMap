@@ -4,4 +4,9 @@
 
 
 
-To build the app, use `npm i` after cloning or pulling the repository
+### Building the project and running the app
+
+1. `npm i`
+2. `adb uninstall com.deepmap` (only necessary if a previous version is already installed)
+3. `npx react-native run-android`
+

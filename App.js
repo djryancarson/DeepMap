@@ -56,7 +56,7 @@ function Resources ( {navigation} ){
 
       <View style={styles.tabBar}>
         <Button style={styles.tabButton} type='outline' color='lightgrey'  title="Community " onPress={() => navigation.navigate('Community')}/>
-        <Button style={styles.tabButton} type='outline' color='lightgrey'  title="Personal" onPress={() => navigation.navigate('Personl')}/>
+        <Button style={styles.tabButton} type='outline' color='lightgrey'  title="Personal" onPress={() => navigation.navigate('Personal')}/>
         <Button style={styles.tabButton} type='outline' color='lightgrey'  title="Preferences" onPress={() => navigation.navigate('Preferences')}/>
       </View>
     </View>
@@ -66,6 +66,8 @@ function Resources ( {navigation} ){
   );
 }
 
+
+
 function Community (){
   return (
     <View>
@@ -73,6 +75,16 @@ function Community (){
     </View>
   );
 }
+
+function Personal (){
+  return (
+    <View>
+      <Text>Hello! This is the personal page!</Text>
+    </View>
+  );
+}
+
+
 function Preferences (){
   return (
     <View>
@@ -90,6 +102,7 @@ function App ( { navigation } ) {
            
            <Stack.Screen name="Resources" component={Resources} />
            <Stack.Screen name="Community" component={Community} />
+           <Stack.Screen name="Personal" component={Personal} />
            <Stack.Screen name="Preferences" component={Preferences} />
          </Stack.Navigator>
          

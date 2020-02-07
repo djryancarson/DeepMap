@@ -10,3 +10,4 @@
 2. `adb uninstall com.deepmap` (only necessary if a previous version is already installed)
 3. `npx react-native run-android`
 
+**OR** if running on Windows for Android: run `AndroidBuild.bat`

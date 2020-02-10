@@ -1,5 +1,6 @@
 import * as React from 'react';
 import WebView from 'react-native-webview';
+import MapView from 'react-native-maps';
 import {
   SafeAreaView,
   StyleSheet,
@@ -39,9 +40,11 @@ function Resources ( {navigation} ){
         
       </View>
 
-      <WebView  style={styles.mapView}
-        source = {{ uri:
-        'https://access.trubox.ca/#wpv-view-layout-825-TCPID925'}}
+      <MapView  
+        style= {styles.mapView}
+        showsUserLocation = {true}
+        followsUserLocation = {true}
+        zoomEnabled = {true}
       />
 
         <View style={{height:50,borderTopColor:'lightgrey',borderTopWidth:2}}>

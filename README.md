@@ -15,8 +15,8 @@
 
 You have have some issues using the command npx react-native run-ios
 
-if you get errors when building 
- 1. `Make sure to have Cocoapods installed`
- 2. `Navigate to the IOS Folder in your Terminal`
- 3. `Use the command pod install'
- 4. `Try building the app again`
+If you get errors when building 
+ 1. Make sure to have Cocoapods installed
+ 2. Navigate to the IOS Folder in your Terminal
+ 3. Use the command `pod install`
+ 4. Try building the app again

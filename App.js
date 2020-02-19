@@ -1,192 +1,42 @@
 import * as React from 'react';
-import WebView from 'react-native-webview';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  Button,
-  Picker
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
+import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-
-//homescreen contains the map 
-function Resources ( {navigation} ){
+function HomeScreen() {
   return (
-    <View style={styles.HomeScreen}>
-      
-      <View style={{height:50,borderBottomColor:'lightgrey',borderBottomWidth:2}}>
-        <Picker>
-          <Picker.Item label = "All" value = "all" />
-          <Picker.Item label = "Academic Accessibility & Supports" value = "academic" />
-          <Picker.Item label = "Counselling" value = "counselling" />
-          <Picker.Item label = "Disability" value = "disability" />
-        </Picker>
-
-        
-      </View>
-
-      <WebView  style={styles.mapView}
-        source = {{ uri:
-        'https://access.trubox.ca/#wpv-view-layout-825-TCPID925'}}
-      />
-
-        <View style={{height:50,borderTopColor:'lightgrey',borderTopWidth:2}}>
-        
-        </View>
-
-      
-
-
-      
-  
-
-      <View style={styles.tabBar}>
-        <Button style={styles.tabButton} type='outline' color='lightgrey'  title="Community " onPress={() => navigation.navigate('Community')}/>
-        <Button style={styles.tabButton} type='outline' color='lightgrey'  title="Personal" onPress={() => navigation.navigate('Personal')}/>
-        <Button style={styles.tabButton} type='outline' color='lightgrey'  title="Preferences" onPress={() => navigation.navigate('Preferences')}/>
-      </View>
-    </View>
-    
-
-
-  );
-}
-
-
-
-function Community (){
-  return (
-    <View>
-      <Text>Hello! This is the community page!</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Home!</Text>
     </View>
   );
 }
 
-function Personal (){
+function CommunityScreen() {
   return (
-    <View>
-      <Text>Hello! This is the personal page!</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Community</Text>
     </View>
   );
 }
 
-
-function Preferences (){
+function PreferencesScreen() {
   return (
-    <View>
-      <Text>Hello! This is the preferences page!</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Preferences</Text>
     </View>
   );
 }
 
-const Stack = createStackNavigator();
+const Tab = createMaterialTopTabNavigator();
 
-function App ( { navigation } ) {
+export default function App() {
   return (
     <NavigationContainer>
-         <Stack.Navigator>
-           
-           <Stack.Screen name="Resources" component={Resources} />
-           <Stack.Screen name="Community" component={Community} />
-           <Stack.Screen name="Personal" component={Personal} />
-           <Stack.Screen name="Preferences" component={Preferences} />
-         </Stack.Navigator>
-         
-         
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Community" component={CommunityScreen} />
+        <Tab.Screen name="Preferences" component={PreferencesScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
-    
   );
-};
-
-
-const styles = StyleSheet.create({
-  scrollView: {
-    flex: 6,
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  container: {
-      height: 500,
-   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-  tabBar: {
-    flex:0.2,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    alignItems: 'stretch',
-    borderTopColor: 'lightgrey',
-    borderTopWidth:2
-  },
-
-
-  mapView: {
-    flex: 1,
-    backgroundColor: 'white'
-
-  },
-  HomeScreen: {
-    flex:1,
-    flexDirection: 'column',
-    //height: 1000
-  },
-
-  scrollView: {
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: 'black',
-    height: 500,
-    
-  },
-  tabButton: {
-    flexDirection: 'row',
-    alignSelf: 'center',
-    textAlignVertical: 'center',
-  }
-});
-
-export default App;
+}

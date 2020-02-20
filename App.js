@@ -45,6 +45,12 @@ function Resources ( {navigation} ){
         showsUserLocation = {true}
         followsUserLocation = {true}
         zoomEnabled = {true}
+		initialRegion={{
+		  latitude: 50.6745,
+		  longitude: -120.3273,
+		  latitudeDelta: 0.0922,
+		  longitudeDelta: 0.0421,
+		}}
       />
 
         <View style={{height:50,borderTopColor:'lightgrey',borderTopWidth:2}}>

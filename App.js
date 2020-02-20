@@ -1,6 +1,6 @@
 import * as React from 'react';
 import WebView from 'react-native-webview';
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 import {
   SafeAreaView,
   StyleSheet,
@@ -22,6 +22,15 @@ import {
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
+var markers = [
+  {
+    latitude: 50.6745,
+    longitude: -120.3273,
+    title: 'Foo Place',
+    subtitle: '1234 Foo Drive'
+  }
+];
 
 
 //homescreen contains the map 
@@ -51,7 +60,33 @@ function Resources ( {navigation} ){
 		  latitudeDelta: 0.0922,
 		  longitudeDelta: 0.0421,
 		}}
-      />
+		>
+        <MapView.Marker
+            coordinate={{latitude: 50.6710194,
+            longitude: -120.3651759}}
+            title={"TRU Wellness Center"}
+            description={"Provided for: Students, TRU Faculty"}
+         />
+        <MapView.Marker
+            coordinate={{latitude: 50.6761238,
+            longitude: -120.3408698}}
+            title={"Kamloops Sexual Assault Counselling Centre"}
+            description={"Provided for: Students, TRU Faculty, Employers"}
+         />
+		 <MapView.Marker
+            coordinate={{latitude: 50.6746966,
+            longitude: -120.3262037}}
+            title={"Volunteer Kamloops"}
+            description={"Provided for: Students, TRU Faculty, Employers"}
+         />
+		 <MapView.Marker
+            coordinate={{latitude: 50.6916131,
+            longitude: -120.3608894}}
+            title={"Kamloops Immigrant Services"}
+            description={"Provided for: Students, TRU Faculty, Employers"}
+         />
+      </MapView>
+
 
         <View style={{height:50,borderTopColor:'lightgrey',borderTopWidth:2}}>
         

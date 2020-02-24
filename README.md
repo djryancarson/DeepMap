@@ -11,7 +11,7 @@
 3. `npx react-native run-android`
 
 
-## IOS build
+### IOS build
 
 You have have some issues using the command npx react-native run-ios
 
@@ -20,3 +20,10 @@ If you get errors when building
  2. Navigate to the IOS Folder in your Terminal
  3. Use the command `pod install`
  4. Try building the app again
+
+
+### Firebase
+
+Not sure if this needs to be installed on every computer or is saved in the file.
+
+1. `npm install --save firebase`

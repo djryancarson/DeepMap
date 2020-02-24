@@ -37,7 +37,7 @@ const Tab = createMaterialTopTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator tabBarPosition="bottom">
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Community" component={CommunityScreen} />
         <Tab.Screen name="Preferences" component={PreferencesScreen} />

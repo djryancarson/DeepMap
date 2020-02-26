@@ -25,6 +25,8 @@ import {
 import { createStackNavigator } from '@react-navigation/stack';
     
 
+import List from './VirtualCommunitiesList';
+
 function HomeScreen() {
   return (
     <View style={styles.HomeScreen}>
@@ -87,15 +89,18 @@ function HomeScreen() {
 
 function CommunityScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Community</Text>
-    </View>
+    <ScrollView>
+      <List />
+    </ScrollView>
   );
 }
 
 function PreferencesScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <ScrollView>
+
+      </ScrollView>
       <Text>Preferences</Text>
     </View>
   );
@@ -106,7 +111,7 @@ const Tab = createMaterialTopTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator tabBarPosition="bottom">
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Community" component={CommunityScreen} />
         <Tab.Screen name="Preferences" component={PreferencesScreen} />

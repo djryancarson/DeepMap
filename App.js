@@ -1,9 +1,10 @@
 import  React, { useState, Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ListView, SafeAreaView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import firebase from 'react-native-firebase';
 import {db} from './src/config';
+import { FlatList } from 'react-native-gesture-handler';
 
 class Home2 extends Component {
   constructor(props) {
@@ -12,12 +13,14 @@ class Home2 extends Component {
     this.state = {
       username: 'ANON',
       count: 3,
-      name: this.props.name
+      name: 'peter', //this.props.name
+      array: []
     };
     //this.getUsername = this.getUsername.bind(this);
   }
   componentDidMount() {
     this.getUsername();
+    this.test();
   }
 
   componentDidUpdate() {
@@ -27,8 +30,8 @@ class Home2 extends Component {
   }
 
   getUsername() {
-    var clientID = "-M0y31qjFFn2yogTIXrN";
-    var username = firebase.database().ref('/leads/'+clientID+'/mobile');
+    var clientID = "-M11lAGgApvZ4Jb_2fZk";
+    var username = firebase.database().ref('/leads/'+clientID+'/email');
     username.once('value').then((snapshot) => {
       this.setState({username: snapshot.val()});
     });
@@ -39,17 +42,65 @@ class Home2 extends Component {
     //   this.setState({username: snapshot.val()});
     // })
   }
+  
+  test() {
+  
+    var nameid = firebase.database().ref('leads');
+    nameid.once('value').then((snapshot) => {
+    this.setState({array: snapshot.val()});
+    
+  });
+}
 
+
+arrmap() {
+  return this.state.array.map((array) => { return (<Text>{array.name}</Text>);
+}
+  )
+}
+
+
+
+// list = () => {
+//   return this.state.array.map(element => {
+//     return (
+//       <View style={{ margin: 10 }}>
+//         <Text>{element.name}</Text>
+//         <Text>{element.email}</Text>
+//       </View>
+//     );
+//   });
+// };
+//{array.map((data) => <Text>{data.name}</Text>)}
+
+/* <FlatList data = {array}
+      renderItem={(data) => <Text>data</Text>}/>
+       */
   render() {
-    const {count, username, name} = this.state;
+    const {count, username, name, array} = this.state;
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home! ayyyyyyyy 
+        
+        
+    
+      
+        
+        <Text>
+          
+          
+          Home! ayyyyyyyy      
         {count}
-  
+        
         {name}
         {username}
+        
+      
+      
+      
+    
         </Text>
+
+        
       </View>
     );
   }

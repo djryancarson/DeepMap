@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+<<<<<<< HEAD
    LastUpgradeVersion = "0940"
+=======
+   LastUpgradeVersion = "1130"
+>>>>>>> database-ios-deepmap
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "NO"
@@ -55,6 +59,18 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+<<<<<<< HEAD
+=======
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+            BuildableName = "DeepMap.app"
+            BlueprintName = "DeepMap"
+            ReferencedContainer = "container:DeepMap.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+>>>>>>> database-ios-deepmap
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -67,6 +83,7 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+<<<<<<< HEAD
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -78,6 +95,8 @@
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
+=======
+>>>>>>> database-ios-deepmap
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -99,8 +118,11 @@
             ReferencedContainer = "container:DeepMap.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+<<<<<<< HEAD
       <AdditionalOptions>
       </AdditionalOptions>
+=======
+>>>>>>> database-ios-deepmap
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

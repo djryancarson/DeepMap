@@ -3,12 +3,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import WebView from 'react-native-webview';
 import MapView, { Marker } from 'react-native-maps';
+//import  React, { useState, Component } from 'react';
+import firebase from 'react-native-firebase';
+import {db} from './src/config';
+import { FlatList } from 'react-native-gesture-handler';
 import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
   Text,
+  ListView,
   StatusBar,
   Button,
   Picker
@@ -101,6 +106,7 @@ function PreferencesScreen() {
       <ScrollView>
 
       </ScrollView>
+
       <Text>Preferences</Text>
     </View>
   );

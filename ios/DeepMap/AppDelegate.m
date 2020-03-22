@@ -6,29 +6,17 @@
  */
 
 #import "AppDelegate.h"
-<<<<<<< HEAD
 #import <GoogleMaps/GoogleMaps.h>
-=======
->>>>>>> database-ios-deepmap
 
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
-<<<<<<< HEAD
-=======
-#import <Firebase.h>
-
->>>>>>> database-ios-deepmap
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-<<<<<<< HEAD
   [GMSServices provideAPIKey:@"AIzaSyBbd75g3j4Ck2zalc1cu3qocP5iS_zAGFc"];
-=======
-  [FIRApp configure];
->>>>>>> database-ios-deepmap
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"DeepMap"
@@ -53,8 +41,4 @@
 #endif
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> database-ios-deepmap
 @end

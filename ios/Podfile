@@ -34,20 +34,14 @@ target 'DeepMap' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
-  # Add the pods for the Firebase products you want to use in your app
-  # For example, to use Firebase Authentication and Cloud Firestore
-  pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
-  pod 'Firebase/Core', '~> 6.13.0'
-  pod 'Firebase/Database'
 
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
 
   target 'DeepMapTests' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
   rn_maps_path = '../node_modules/react-native-maps'
   pod 'react-native-google-maps', :path => rn_maps_path
   pod 'GoogleMaps'

@@ -8,13 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* DeepMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DeepMapTests.m */; };
-<<<<<<< HEAD
-=======
-		07ABB77223F5F4770018ED0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07ABB77123F5F4770018ED0E /* GoogleService-Info.plist */; };
-		07ABB77323F5F4770018ED0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07ABB77123F5F4770018ED0E /* GoogleService-Info.plist */; };
-		07ABB77423F5F4770018ED0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07ABB77123F5F4770018ED0E /* GoogleService-Info.plist */; };
-		07ABB77523F5F4770018ED0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07ABB77123F5F4770018ED0E /* GoogleService-Info.plist */; };
->>>>>>> database-ios-deepmap
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -23,17 +16,10 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* DeepMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DeepMapTests.m */; };
-<<<<<<< HEAD
 		3888509F1AE99E7492D8AA90 /* libPods-DeepMap-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BD7C631DC09F153D5A381F /* libPods-DeepMap-tvOS.a */; };
 		79133EFEED92CC54986E801C /* libPods-DeepMap-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14402350104A0D9FAFDF9C00 /* libPods-DeepMap-tvOSTests.a */; };
 		7C6A955D47A355C73AE6DAB8 /* libPods-DeepMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CA051E1457D3197D9893B5 /* libPods-DeepMap.a */; };
 		A7DE6D052286FF6EC1F00A9C /* libPods-DeepMapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629E645C57A521A3A84F63EC /* libPods-DeepMapTests.a */; };
-=======
-		37B6450F5C6E923C5DBE53D2 /* libPods-DeepMapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99EBF072A4673D74E15B60B4 /* libPods-DeepMapTests.a */; };
-		8E53CEF1F19B58E786C5A35E /* libPods-DeepMap-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAEF81559BB186FA191076F /* libPods-DeepMap-tvOSTests.a */; };
-		B30DAAFD3F0579E0F207E6DB /* libPods-DeepMap-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE75187FBE88E34BACFE6D1 /* libPods-DeepMap-tvOS.a */; };
-		E4DF915171D81002E067039D /* libPods-DeepMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D08C57240534E69766D3B6A6 /* libPods-DeepMap.a */; };
->>>>>>> database-ios-deepmap
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +44,6 @@
 		00E356EE1AD99517003FC87E /* DeepMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* DeepMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeepMapTests.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
-=======
-		07ABB77123F5F4770018ED0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
->>>>>>> database-ios-deepmap
 		13B07F961A680F5B00A75B9A /* DeepMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DeepMap/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = DeepMap/AppDelegate.m; sourceTree = "<group>"; };
@@ -69,7 +51,6 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DeepMap/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DeepMap/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DeepMap/main.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		14402350104A0D9FAFDF9C00 /* libPods-DeepMap-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeepMap-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BD7C631DC09F153D5A381F /* libPods-DeepMap-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeepMap-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C583FE55E49FC249A498354 /* Pods-DeepMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepMap.debug.xcconfig"; path = "Target Support Files/Pods-DeepMap/Pods-DeepMap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,24 +67,6 @@
 		EA7F3DB15B351662074D0A3C /* Pods-DeepMap-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepMap-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-DeepMap-tvOS/Pods-DeepMap-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-=======
-		22A88A006504DCCD03EAE86F /* Pods-DeepMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepMapTests.release.xcconfig"; path = "Target Support Files/Pods-DeepMapTests/Pods-DeepMapTests.release.xcconfig"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* DeepMap-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DeepMap-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* DeepMap-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeepMap-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DCCFB3778FCEC7FC473238C /* Pods-DeepMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepMapTests.debug.xcconfig"; path = "Target Support Files/Pods-DeepMapTests/Pods-DeepMapTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8753F6B90EC29544B40732DE /* Pods-DeepMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepMap.debug.xcconfig"; path = "Target Support Files/Pods-DeepMap/Pods-DeepMap.debug.xcconfig"; sourceTree = "<group>"; };
-		99EBF072A4673D74E15B60B4 /* libPods-DeepMapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeepMapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2AE4CAC6FE3E8EE0C8044DA /* Pods-DeepMap-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepMap-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-DeepMap-tvOS/Pods-DeepMap-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		BAED9818505544FF3520D338 /* Pods-DeepMap-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepMap-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DeepMap-tvOSTests/Pods-DeepMap-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CA3AE6A31B1277BCB33DE7FD /* Pods-DeepMap-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepMap-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-DeepMap-tvOSTests/Pods-DeepMap-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		D08C57240534E69766D3B6A6 /* libPods-DeepMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeepMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAE75187FBE88E34BACFE6D1 /* libPods-DeepMap-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeepMap-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF1C0E0A75F0C6AE3B16885E /* Pods-DeepMap-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepMap-tvOS.release.xcconfig"; path = "Target Support Files/Pods-DeepMap-tvOS/Pods-DeepMap-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F5711F6AF7E42889F27ACDD4 /* Pods-DeepMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepMap.release.xcconfig"; path = "Target Support Files/Pods-DeepMap/Pods-DeepMap.release.xcconfig"; sourceTree = "<group>"; };
-		FFAEF81559BB186FA191076F /* libPods-DeepMap-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeepMap-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
->>>>>>> database-ios-deepmap
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				A7DE6D052286FF6EC1F00A9C /* libPods-DeepMapTests.a in Frameworks */,
-=======
-				37B6450F5C6E923C5DBE53D2 /* libPods-DeepMapTests.a in Frameworks */,
->>>>>>> database-ios-deepmap
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,11 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				7C6A955D47A355C73AE6DAB8 /* libPods-DeepMap.a in Frameworks */,
-=======
-				E4DF915171D81002E067039D /* libPods-DeepMap.a in Frameworks */,
->>>>>>> database-ios-deepmap
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,11 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				3888509F1AE99E7492D8AA90 /* libPods-DeepMap-tvOS.a in Frameworks */,
-=======
-				B30DAAFD3F0579E0F207E6DB /* libPods-DeepMap-tvOS.a in Frameworks */,
->>>>>>> database-ios-deepmap
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,11 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				79133EFEED92CC54986E801C /* libPods-DeepMap-tvOSTests.a in Frameworks */,
-=======
-				8E53CEF1F19B58E786C5A35E /* libPods-DeepMap-tvOSTests.a in Frameworks */,
->>>>>>> database-ios-deepmap
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,39 +141,14 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-<<<<<<< HEAD
 				A5CA051E1457D3197D9893B5 /* libPods-DeepMap.a */,
 				26BD7C631DC09F153D5A381F /* libPods-DeepMap-tvOS.a */,
 				14402350104A0D9FAFDF9C00 /* libPods-DeepMap-tvOSTests.a */,
 				629E645C57A521A3A84F63EC /* libPods-DeepMapTests.a */,
-=======
-				D08C57240534E69766D3B6A6 /* libPods-DeepMap.a */,
-				DAE75187FBE88E34BACFE6D1 /* libPods-DeepMap-tvOS.a */,
-				FFAEF81559BB186FA191076F /* libPods-DeepMap-tvOSTests.a */,
-				99EBF072A4673D74E15B60B4 /* libPods-DeepMapTests.a */,
->>>>>>> database-ios-deepmap
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-=======
-		7CA9C9095308E887182FDFF8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8753F6B90EC29544B40732DE /* Pods-DeepMap.debug.xcconfig */,
-				F5711F6AF7E42889F27ACDD4 /* Pods-DeepMap.release.xcconfig */,
-				B2AE4CAC6FE3E8EE0C8044DA /* Pods-DeepMap-tvOS.debug.xcconfig */,
-				DF1C0E0A75F0C6AE3B16885E /* Pods-DeepMap-tvOS.release.xcconfig */,
-				BAED9818505544FF3520D338 /* Pods-DeepMap-tvOSTests.debug.xcconfig */,
-				CA3AE6A31B1277BCB33DE7FD /* Pods-DeepMap-tvOSTests.release.xcconfig */,
-				6DCCFB3778FCEC7FC473238C /* Pods-DeepMapTests.debug.xcconfig */,
-				22A88A006504DCCD03EAE86F /* Pods-DeepMapTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
->>>>>>> database-ios-deepmap
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,20 +159,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-=======
-				07ABB77123F5F4770018ED0E /* GoogleService-Info.plist */,
->>>>>>> database-ios-deepmap
 				13B07FAE1A68108700A75B9A /* DeepMap */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* DeepMapTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-<<<<<<< HEAD
 				AC2DD0B6716F99EAB913E331 /* Pods */,
-=======
-				7CA9C9095308E887182FDFF8 /* Pods */,
->>>>>>> database-ios-deepmap
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -268,7 +182,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		AC2DD0B6716F99EAB913E331 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,8 +198,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-=======
->>>>>>> database-ios-deepmap
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,11 +205,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "DeepMapTests" */;
 			buildPhases = (
-<<<<<<< HEAD
 				E92EBC7EAE7A55E114F1CE8D /* [CP] Check Pods Manifest.lock */,
-=======
-				8D88E9664F0851B50424D023 /* [CP] Check Pods Manifest.lock */,
->>>>>>> database-ios-deepmap
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -317,21 +224,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DeepMap" */;
 			buildPhases = (
-<<<<<<< HEAD
 				E2F059EE2EF68F2CAFCB7FA4 /* [CP] Check Pods Manifest.lock */,
-=======
-				00D01BA80BD2494AAA06E51E /* [CP] Check Pods Manifest.lock */,
->>>>>>> database-ios-deepmap
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-<<<<<<< HEAD
 				C005BA7F5288F23EF2FE8332 /* [CP] Copy Pods Resources */,
-=======
-				C94142EC9FC98B461C3DD928 /* [CP] Copy Pods Resources */,
->>>>>>> database-ios-deepmap
 			);
 			buildRules = (
 			);
@@ -346,11 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DeepMap-tvOS" */;
 			buildPhases = (
-<<<<<<< HEAD
 				4ED78A7E0A22457BE4631EDB /* [CP] Check Pods Manifest.lock */,
-=======
-				61589F31E6ED04B4F9031926 /* [CP] Check Pods Manifest.lock */,
->>>>>>> database-ios-deepmap
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -370,11 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DeepMap-tvOSTests" */;
 			buildPhases = (
-<<<<<<< HEAD
 				34353079EDD2DC202404070C /* [CP] Check Pods Manifest.lock */,
-=======
-				04013D5FB7A1FFB34EB5D234 /* [CP] Check Pods Manifest.lock */,
->>>>>>> database-ios-deepmap
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -395,11 +286,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-<<<<<<< HEAD
 				LastUpgradeCheck = 0940;
-=======
-				LastUpgradeCheck = 1130;
->>>>>>> database-ios-deepmap
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -419,11 +306,7 @@
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "DeepMap" */;
 			compatibilityVersion = "Xcode 3.2";
-<<<<<<< HEAD
 			developmentRegion = English;
-=======
-			developmentRegion = en;
->>>>>>> database-ios-deepmap
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -447,10 +330,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-=======
-				07ABB77323F5F4770018ED0E /* GoogleService-Info.plist in Resources */,
->>>>>>> database-ios-deepmap
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,10 +339,6 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-<<<<<<< HEAD
-=======
-				07ABB77223F5F4770018ED0E /* GoogleService-Info.plist in Resources */,
->>>>>>> database-ios-deepmap
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,10 +347,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
-<<<<<<< HEAD
-=======
-				07ABB77423F5F4770018ED0E /* GoogleService-Info.plist in Resources */,
->>>>>>> database-ios-deepmap
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,26 +354,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-=======
-				07ABB77523F5F4770018ED0E /* GoogleService-Info.plist in Resources */,
->>>>>>> database-ios-deepmap
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-<<<<<<< HEAD
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
-=======
-		00D01BA80BD2494AAA06E51E /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> database-ios-deepmap
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-<<<<<<< HEAD
 			inputPaths = (
 			);
 			name = "Bundle React Native code and images";
@@ -513,48 +375,20 @@
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-=======
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DeepMap-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
->>>>>>> database-ios-deepmap
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-<<<<<<< HEAD
 			name = "Bundle React Native Code And Images";
-=======
-			name = "Bundle React Native code and images";
->>>>>>> database-ios-deepmap
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-<<<<<<< HEAD
 		34353079EDD2DC202404070C /* [CP] Check Pods Manifest.lock */ = {
-=======
-		04013D5FB7A1FFB34EB5D234 /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> database-ios-deepmap
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -576,16 +410,11 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-<<<<<<< HEAD
 		4ED78A7E0A22457BE4631EDB /* [CP] Check Pods Manifest.lock */ = {
-=======
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
->>>>>>> database-ios-deepmap
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-<<<<<<< HEAD
 			inputFileListPaths = (
 			);
 			inputPaths = (
@@ -604,23 +433,10 @@
 			showEnvVarsInLog = 0;
 		};
 		C005BA7F5288F23EF2FE8332 /* [CP] Copy Pods Resources */ = {
-=======
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		61589F31E6ED04B4F9031926 /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> database-ios-deepmap
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-<<<<<<< HEAD
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DeepMap/Pods-DeepMap-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
@@ -635,26 +451,6 @@
 			showEnvVarsInLog = 0;
 		};
 		E2F059EE2EF68F2CAFCB7FA4 /* [CP] Check Pods Manifest.lock */ = {
-=======
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DeepMap-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D88E9664F0851B50424D023 /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> database-ios-deepmap
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -669,27 +465,18 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-<<<<<<< HEAD
 				"$(DERIVED_FILE_DIR)/Pods-DeepMap-checkManifestLockResult.txt",
-=======
-				"$(DERIVED_FILE_DIR)/Pods-DeepMapTests-checkManifestLockResult.txt",
->>>>>>> database-ios-deepmap
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-<<<<<<< HEAD
 		E92EBC7EAE7A55E114F1CE8D /* [CP] Check Pods Manifest.lock */ = {
-=======
-		C94142EC9FC98B461C3DD928 /* [CP] Copy Pods Resources */ = {
->>>>>>> database-ios-deepmap
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-<<<<<<< HEAD
 			inputFileListPaths = (
 			);
 			inputPaths = (
@@ -705,19 +492,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-=======
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DeepMap/Pods-DeepMap-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Cpp.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeepMap/Pods-DeepMap-resources.sh\"\n";
->>>>>>> database-ios-deepmap
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -825,11 +599,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 6B29705E324EAC2585636126 /* Pods-DeepMapTests.debug.xcconfig */;
-=======
-			baseConfigurationReference = 6DCCFB3778FCEC7FC473238C /* Pods-DeepMapTests.debug.xcconfig */;
->>>>>>> database-ios-deepmap
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -852,11 +622,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 657B6F6A2A5BBA86FAFA7C2A /* Pods-DeepMapTests.release.xcconfig */;
-=======
-			baseConfigurationReference = 22A88A006504DCCD03EAE86F /* Pods-DeepMapTests.release.xcconfig */;
->>>>>>> database-ios-deepmap
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -876,11 +642,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 2C583FE55E49FC249A498354 /* Pods-DeepMap.debug.xcconfig */;
-=======
-			baseConfigurationReference = 8753F6B90EC29544B40732DE /* Pods-DeepMap.debug.xcconfig */;
->>>>>>> database-ios-deepmap
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -900,11 +662,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 90E42479D4EA024EE5F6D3D0 /* Pods-DeepMap.release.xcconfig */;
-=======
-			baseConfigurationReference = F5711F6AF7E42889F27ACDD4 /* Pods-DeepMap.release.xcconfig */;
->>>>>>> database-ios-deepmap
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -923,11 +681,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = EA7F3DB15B351662074D0A3C /* Pods-DeepMap-tvOS.debug.xcconfig */;
-=======
-			baseConfigurationReference = B2AE4CAC6FE3E8EE0C8044DA /* Pods-DeepMap-tvOS.debug.xcconfig */;
->>>>>>> database-ios-deepmap
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -955,11 +709,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 980E2264E65B5BA05D7E8F35 /* Pods-DeepMap-tvOS.release.xcconfig */;
-=======
-			baseConfigurationReference = DF1C0E0A75F0C6AE3B16885E /* Pods-DeepMap-tvOS.release.xcconfig */;
->>>>>>> database-ios-deepmap
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -987,11 +737,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = C1E484D29A68BE94F94AE283 /* Pods-DeepMap-tvOSTests.debug.xcconfig */;
-=======
-			baseConfigurationReference = BAED9818505544FF3520D338 /* Pods-DeepMap-tvOSTests.debug.xcconfig */;
->>>>>>> database-ios-deepmap
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1018,11 +764,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 5D44D6FA7FE615D7C5CE6B5C /* Pods-DeepMap-tvOSTests.release.xcconfig */;
-=======
-			baseConfigurationReference = CA3AE6A31B1277BCB33DE7FD /* Pods-DeepMap-tvOSTests.release.xcconfig */;
->>>>>>> database-ios-deepmap
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1051,10 +793,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-<<<<<<< HEAD
-=======
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
->>>>>>> database-ios-deepmap
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1108,10 +846,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-<<<<<<< HEAD
-=======
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
->>>>>>> database-ios-deepmap
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

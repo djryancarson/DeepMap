@@ -2,7 +2,10 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import WebView from 'react-native-webview';
+import { useState, Component } from 'react';
 import MapView, { Marker } from 'react-native-maps';
+import firebase from 'react-native-firebase';
+import {db} from './src/config';
 import {
   SafeAreaView,
   StyleSheet,
@@ -27,8 +30,92 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import List from './VirtualCommunitiesList';
 
-function HomeScreen() {
+class HomeScreen extends Component
+{
+
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      username: 'ANON',
+      count: 3,
+      name: 'peter', //this.props.name
+      array: []//[1,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+    };
+    //this.getUsername = this.getUsername.bind(this);
+  }
+  componentDidMount() {
+    this.getUsername();
+    this.test();
+  }
+
+  componentDidUpdate() {
+    // if (this.state.username == 'ANON') {
+    //   this.getUsername();
+    // }
+  }
+
+  getUsername() {
+    var clientID = "-M11lAGgApvZ4Jb_2fZk";
+    var username = firebase.database().ref('/leads/'+clientID+'/email');
+    username.once('value').then((snapshot) => {
+      this.setState({username: snapshot.val()});
+    });
+    // }).catch(() => {
+    //   this.setState({username: 'GOOF'});
+    // });
+    // username.once('value', function(snapshot){
+    //   this.setState({username: snapshot.val()});
+    // })
+  }
+  
+//   test() {
+  
+//     var nameid = firebase.database().ref("leads").orderByKey();
+//     nameid.once("value").then(function(snapshot) {
+//       var array = [];
+//       snapshot.forEach(function(childSnapshot) {
+        
+//         var childData = childSnapshot.val();
+//         array.push(childData);
+//       });
+//       this.setState({ array: array});
+//     });
+
+
+
+
+
+
+//     // nameid.once('value').then((snapshot) => {
+//     // this.setState({array: snapshot.val()});
+    
+//   // });
+// }
+
+// function that will make an array for firebase objects in this case the children of the tree leads
+test() {
+  
+  var nameid = firebase.database().ref("leads").orderByKey();
+  nameid.once("value").then(snapshot => {
+    var array = []
+    snapshot.forEach(childSnapshot =>  {
+      
+      var childData = childSnapshot.val();
+      array.push(childData);
+    });
+    this.setState({ array: array});
+  });
+
+
+}
+
+
+  render () 
+{
+  const {count, username, name, array} = this.state;
   return (
+    
     <View style={styles.HomeScreen}>
       <View style={{height:50,borderBottomColor:'lightgrey',borderBottomWidth:2}}>
         <Picker>
@@ -40,7 +127,8 @@ function HomeScreen() {
 
         
       </View>
-
+      {/* testing the mapping function for the database */}
+      {/* {array.map((data) => (<Text>{data.name}</Text>))} */}
       <MapView  
         style= {styles.mapView}
         showsUserLocation = {true}
@@ -86,6 +174,8 @@ function HomeScreen() {
     </View>
   );
 }
+}
+
 
 function CommunityScreen() {
   return (

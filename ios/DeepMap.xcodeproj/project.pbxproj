@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* DeepMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DeepMapTests.m */; };
-		073318CE24283EBF0016C9FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 073318CD24283EBF0016C9FF /* GoogleService-Info.plist */; };
-		073318CF24283EBF0016C9FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 073318CD24283EBF0016C9FF /* GoogleService-Info.plist */; };
-		073318D024283EBF0016C9FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 073318CD24283EBF0016C9FF /* GoogleService-Info.plist */; };
-		073318D124283EBF0016C9FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 073318CD24283EBF0016C9FF /* GoogleService-Info.plist */; };
+		07157295242AB7FC008271FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07157294242AB7FC008271FB /* GoogleService-Info.plist */; };
+		07157296242AB7FC008271FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07157294242AB7FC008271FB /* GoogleService-Info.plist */; };
+		07157297242AB7FC008271FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07157294242AB7FC008271FB /* GoogleService-Info.plist */; };
+		07157298242AB7FC008271FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07157294242AB7FC008271FB /* GoogleService-Info.plist */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -48,7 +48,7 @@
 		00E356EE1AD99517003FC87E /* DeepMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* DeepMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeepMapTests.m; sourceTree = "<group>"; };
-		073318CD24283EBF0016C9FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		07157294242AB7FC008271FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* DeepMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DeepMap/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = DeepMap/AppDelegate.m; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				073318CD24283EBF0016C9FF /* GoogleService-Info.plist */,
+				07157294242AB7FC008271FB /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* DeepMap */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* DeepMapTests */,
@@ -336,7 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				073318CF24283EBF0016C9FF /* GoogleService-Info.plist in Resources */,
+				07157296242AB7FC008271FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +346,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				073318CE24283EBF0016C9FF /* GoogleService-Info.plist in Resources */,
+				07157295242AB7FC008271FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
-				073318D024283EBF0016C9FF /* GoogleService-Info.plist in Resources */,
+				07157297242AB7FC008271FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				073318D124283EBF0016C9FF /* GoogleService-Info.plist in Resources */,
+				07157298242AB7FC008271FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

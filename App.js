@@ -96,7 +96,7 @@ class HomeScreen extends Component
 // function that will make an array for firebase objects in this case the children of the tree leads
 test() {
   
-  var nameid = firebase.database().ref("leads").orderByKey();
+  var nameid = firebase.database().ref("community_resources").orderByKey();
   nameid.once("value").then(snapshot => {
     var array = []
     snapshot.forEach(childSnapshot =>  {
@@ -128,7 +128,9 @@ test() {
         
       </View>
       {/* testing the mapping function for the database */}
-      {/* {array.map((data) => (<Text>{data.name}</Text>))} */}
+     
+
+      
       <MapView  
         style= {styles.mapView}
         showsUserLocation = {true}
@@ -141,7 +143,19 @@ test() {
 		  longitudeDelta: 0.0421,
 		}}
 		>
-        <MapView.Marker
+
+      {/* Fucntion to the add all the markers to the Map */}
+     {array.map((data) => (<MapView.Marker
+            coordinate={{latitude: data.latitude,
+            longitude: data.longitude}}
+            title={data.title}
+            description={data.description}
+         />))}  
+       
+       
+       
+       
+        {/* <MapView.Marker
             coordinate={{latitude: 50.6710194,
             longitude: -120.3651759}}
             title={"TRU Wellness Center"}
@@ -164,7 +178,7 @@ test() {
             longitude: -120.3608894}}
             title={"Kamloops Immigrant Services"}
             description={"Provided for: Students, TRU Faculty, Employers"}
-         />
+         /> */}
       </MapView>
 
 

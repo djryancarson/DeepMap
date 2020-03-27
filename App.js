@@ -148,7 +148,7 @@ test() {
      {array.map((data) => (<MapView.Marker
             coordinate={{latitude: data.latitude,
             longitude: data.longitude}}
-            title={data.title}
+            title={data.name}
             description={data.description}
          />))}  
        

@@ -32,6 +32,11 @@ import List from './VirtualCommunitiesList';
 
 class HomeScreen extends Component
 {
+	
+	updateFilter = (filter) => {
+		this.setState({filter: filter})
+		this.filterMap(filter);
+	}
 
   constructor(props) {
     super(props);
@@ -40,7 +45,8 @@ class HomeScreen extends Component
       username: 'ANON',
       count: 3,
       name: 'peter', //this.props.name
-      array: []//[1,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+      array: [],//[1,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+	  filter: 'all'
     };
     //this.getUsername = this.getUsername.bind(this);
   }
@@ -110,6 +116,23 @@ test() {
 
 }
 
+filterMap(filter) {
+  
+  var nameid = firebase.database().ref("community_resources").orderByKey();
+  nameid.once("value").then(snapshot => {
+    var array = []
+    snapshot.forEach(childSnapshot =>  {
+      
+      var childData = childSnapshot.val();
+	  var childFilter = childSnapshot.child("categories/" + filter).val();
+	  if(childFilter || filter == "all"){array.push(childData);}
+    });
+    this.setState({ array: array});
+  });
+
+
+}
+
 
   render () 
 {
@@ -118,11 +141,26 @@ test() {
     
     <View style={styles.HomeScreen}>
       <View style={{height:50,borderBottomColor:'lightgrey',borderBottomWidth:2}}>
-        <Picker>
+        <Picker
+			selectedValue={this.state.filter}
+			onValueChange={this.updateFilter}
+		>
           <Picker.Item label = "All" value = "all" />
-          <Picker.Item label = "Academic Accessibility & Supports" value = "academic" />
+          <Picker.Item label = "Academic Accessibility & Supports" value = "academic_accessibility_supports" />
           <Picker.Item label = "Counselling" value = "counselling" />
-          <Picker.Item label = "Disability" value = "disability" />
+		  <Picker.Item label = "Disability" value = "disability" />
+          <Picker.Item label = "Food Assistance" value = "food_assistance" />
+		  <Picker.Item label = "Funding & Wage Subsities" value = "funding_wage_subsidies" />
+		  <Picker.Item label = "Health & Wellness" value = "health_wellness" />
+		  <Picker.Item label = "Housing" value = "housing" />
+		  <Picker.Item label = "Indigenous" value = "indigenous" />
+		  <Picker.Item label = "International" value = "international" />
+		  <Picker.Item label = "LGBTQ2S+" value = "lgbtq2s+" />
+		  <Picker.Item label = "Legal Advice" value = "legal_advice" />
+		  <Picker.Item label = "Mental Health & Addictions" value = "mental_health_addictions" />
+		  <Picker.Item label = "Other" value = "other" />
+		  <Picker.Item label = "Sexualized Violence" value = "sexualized_violence" />
+		  <Picker.Item label = "Workplace Accessibility & Career Services" value = "workplace_accessibility_career_services" />
         </Picker>
 
         
@@ -146,13 +184,13 @@ test() {
 
       {/* Fucntion to the add all the markers to the Map */}
      {array.map((data) => (<MapView.Marker
-            coordinate={{latitude: data.latitude,
-            longitude: data.longitude}}
+            coordinate={{latitude: parseFloat(data.latitude),
+            longitude: parseFloat(data.longitude)}}
             title={data.name}
             description={data.description}
          />))}  
        
-       
+
        
        
         {/* <MapView.Marker

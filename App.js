@@ -3,14 +3,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import WebView from 'react-native-webview';
 import { useState, Component } from 'react';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, Callout, CalloutSubview } from 'react-native-maps';
 import firebase from 'react-native-firebase';
 import {db} from './src/config';
 import {
+  Alert,
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
+  Modal,
   Text,
   StatusBar,
   Button,
@@ -33,6 +35,9 @@ import List from './VirtualCommunitiesList';
 class HomeScreen extends Component
 {
 	
+	setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });}
+	
 	updateFilter = (filter) => {
 		this.setState({filter: filter})
 		this.filterMap(filter);
@@ -46,7 +51,8 @@ class HomeScreen extends Component
       count: 3,
       name: 'peter', //this.props.name
       array: [],//[1,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
-	  filter: 'all'
+	  filter: 'all',
+	  modalVisible: false
     };
     //this.getUsername = this.getUsername.bind(this);
   }
@@ -136,11 +142,27 @@ filterMap(filter) {
 
   render () 
 {
-  const {count, username, name, array} = this.state;
+  const {count, username, name, array, modalVisible} = this.state;
   return (
     
     <View style={styles.HomeScreen}>
       <View style={{height:50,borderBottomColor:'lightgrey',borderBottomWidth:2}}>
+	  
+		<Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            Alert.alert("Modal has been closed.");
+          }}
+        >
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+              <Text style={styles.modalText}>Hello World</Text>
+            </View>
+          </View>
+        </Modal>
+		
         <Picker
 			selectedValue={this.state.filter}
 			onValueChange={this.updateFilter}
@@ -188,6 +210,7 @@ filterMap(filter) {
             longitude: parseFloat(data.longitude)}}
             title={data.name}
             description={data.description}
+			onCalloutPress={() => this.setModalVisible(true)}
          />))}  
        
 
@@ -273,6 +296,31 @@ const styles = StyleSheet.create({
   },
   body: {
     backgroundColor: Colors.white,
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 22,
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: "center"
   },
   sectionContainer: {
     marginTop: 32,

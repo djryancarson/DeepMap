@@ -114,7 +114,7 @@ test() {
     snapshot.forEach(childSnapshot =>  {
       
       var childData = childSnapshot.val();
-      array.push(childData);
+      if (childData.longitude != null) {array.push(childData);}
     });
     this.setState({ array: array});
   });
@@ -131,7 +131,7 @@ filterMap(filter) {
       
       var childData = childSnapshot.val();
 	  var childFilter = childSnapshot.child("categories/" + filter).val();
-	  if(childFilter || filter == "all"){array.push(childData);}
+	  if((childFilter || filter == "all")&&(childData.longitude != null)){array.push(childData);}
     });
     this.setState({ array: array});
   });

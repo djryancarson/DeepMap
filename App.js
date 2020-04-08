@@ -13,6 +13,7 @@ import {
   ScrollView,
   View,
   Modal,
+  TouchableHighlight,
   Text,
   StatusBar,
   Button,
@@ -52,7 +53,11 @@ class HomeScreen extends Component
       name: 'peter', //this.props.name
       array: [],//[1,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
 	  filter: 'all',
-	  modalVisible: false
+    modalVisible: false,
+    description: '',
+    picture: '',
+    phonenumber:'',
+    email:''
     };
     //this.getUsername = this.getUsername.bind(this);
   }
@@ -114,7 +119,7 @@ test() {
     snapshot.forEach(childSnapshot =>  {
       
       var childData = childSnapshot.val();
-      if (childData.longitude != null) {array.push(childData);}
+      array.push(childData);
     });
     this.setState({ array: array});
   });
@@ -131,7 +136,7 @@ filterMap(filter) {
       
       var childData = childSnapshot.val();
 	  var childFilter = childSnapshot.child("categories/" + filter).val();
-	  if((childFilter || filter == "all")&&(childData.longitude != null)){array.push(childData);}
+	  if(childFilter || filter == "all"){array.push(childData);}
     });
     this.setState({ array: array});
   });
@@ -142,26 +147,13 @@ filterMap(filter) {
 
   render () 
 {
-  const {count, username, name, array, modalVisible} = this.state;
+  const {count, username, name, array, modalVisible,description, phonenumber, email, picture} = this.state;
   return (
     
     <View style={styles.HomeScreen}>
       <View style={{height:50,borderBottomColor:'lightgrey',borderBottomWidth:2}}>
 	  
-		<Modal
-          animationType="slide"
-          transparent={true}
-          visible={modalVisible}
-          onRequestClose={() => {
-            Alert.alert("Modal has been closed.");
-          }}
-        >
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <Text style={styles.modalText}>Hello World</Text>
-            </View>
-          </View>
-        </Modal>
+		
 		
         <Picker
 			selectedValue={this.state.filter}
@@ -189,7 +181,43 @@ filterMap(filter) {
       </View>
       {/* testing the mapping function for the database */}
      
+      <Modal
+      animationType="slide"
+      transparent={true}
+      visible = {modalVisible}
+      >
+      
+      <View style={styles.centeredView}>
+        <View style={styles.modalView}>
+          <Text style={styles.modalText}>
+            
+            
+            {name}
+            /n
+            {description}
+            /n
+            {phonenumber}
+            /n
+            {email}
+          
 
+          {/* {(data.image).getDownloadURL()} */}
+          
+          </Text>
+          
+          <TouchableHighlight
+              style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
+              onPress={() => {
+                 this.setModalVisible(false);
+              }}
+            >
+              <Text style={styles.textStyle}>Hide Modal</Text>
+            </TouchableHighlight>
+
+          
+        </View>
+      </View>
+    </Modal>
       
       <MapView  
         style= {styles.mapView}
@@ -205,13 +233,36 @@ filterMap(filter) {
 		>
 
       {/* Fucntion to the add all the markers to the Map */}
-     {array.map((data) => (<MapView.Marker
+     {array.map((data) => 
+     
+     
+     (
+
+      <View>
+      
+     
+     
+     <MapView.Marker
             coordinate={{latitude: parseFloat(data.latitude),
             longitude: parseFloat(data.longitude)}}
             title={data.name}
             description={data.description}
-			onCalloutPress={() => this.setModalVisible(true)}
-         />))}  
+            onCalloutPress={() => (
+              this.setModalVisible(true),
+              this.setState({name: data.name}),
+              this.setState({phonenumber: data.phone}),
+              this.setState({description: data.description}),
+              this.setState({email: data.email}),
+              this.setState({picture: data.image})
+            )
+            }
+         />
+         
+         
+         </View>
+         
+         
+         ))}  
        
 
        

@@ -22,6 +22,7 @@ import {
 
 import {
   Header,
+  Image,
   LearnMoreLinks,
   Colors,
   DebugInstructions,
@@ -55,7 +56,7 @@ class HomeScreen extends Component
 	  filter: 'all',
     modalVisible: false,
     description: '',
-    picture: '',
+    image: '',
     phonenumber:'',
     email:''
     };
@@ -147,38 +148,11 @@ filterMap(filter) {
 
   render () 
 {
-  const {count, username, name, array, modalVisible,description, phonenumber, email, picture} = this.state;
+  const {count, username, name, array, modalVisible,description, phonenumber, email, image} = this.state;
   return (
     
     <View style={styles.HomeScreen}>
-      <View style={{height:50,borderBottomColor:'lightgrey',borderBottomWidth:2}}>
-	  
-		
-		
-        <Picker
-			selectedValue={this.state.filter}
-			onValueChange={this.updateFilter}
-		>
-          <Picker.Item label = "All" value = "all" />
-          <Picker.Item label = "Academic Accessibility & Supports" value = "academic_accessibility_supports" />
-          <Picker.Item label = "Counselling" value = "counselling" />
-		  <Picker.Item label = "Disability" value = "disability" />
-          <Picker.Item label = "Food Assistance" value = "food_assistance" />
-		  <Picker.Item label = "Funding & Wage Subsities" value = "funding_wage_subsidies" />
-		  <Picker.Item label = "Health & Wellness" value = "health_wellness" />
-		  <Picker.Item label = "Housing" value = "housing" />
-		  <Picker.Item label = "Indigenous" value = "indigenous" />
-		  <Picker.Item label = "International" value = "international" />
-		  <Picker.Item label = "LGBTQ2S+" value = "lgbtq2s+" />
-		  <Picker.Item label = "Legal Advice" value = "legal_advice" />
-		  <Picker.Item label = "Mental Health & Addictions" value = "mental_health_addictions" />
-		  <Picker.Item label = "Other" value = "other" />
-		  <Picker.Item label = "Sexualized Violence" value = "sexualized_violence" />
-		  <Picker.Item label = "Workplace Accessibility & Career Services" value = "workplace_accessibility_career_services" />
-        </Picker>
-
-        
-      </View>
+      
       {/* testing the mapping function for the database */}
      
       <Modal
@@ -193,15 +167,19 @@ filterMap(filter) {
             
             
             {name}
-            /n
+            {"\n"}
             {description}
-            /n
+            {"\n"}
             {phonenumber}
-            /n
+            {`\n`}
             {email}
+            {`\n`}
+            {image}
+            {/* <Image source={{uri: `${image}`}} /> */}
+
           
 
-          {/* {(data.image).getDownloadURL()} */}
+            {/* {(picture).getDownloadURL()} */}
           
           </Text>
           
@@ -248,12 +226,13 @@ filterMap(filter) {
             title={data.name}
             description={data.description}
             onCalloutPress={() => (
+              
               this.setModalVisible(true),
               this.setState({name: data.name}),
               this.setState({phonenumber: data.phone}),
               this.setState({description: data.description}),
               this.setState({email: data.email}),
-              this.setState({picture: data.image})
+              this.setState({image: data.image})
             )
             }
          />
@@ -293,8 +272,35 @@ filterMap(filter) {
          /> */}
       </MapView>
 
+      <View style={{flex:1}}>
+	  
+    <Text>
+    </Text>
+        <Picker
+			selectedValue={this.state.filter}
+			onValueChange={this.updateFilter}
+		>
+          <Picker.Item label = "All" value = "all" />
+          <Picker.Item label = "Academic Accessibility & Supports" value = "academic_accessibility_supports" />
+          <Picker.Item label = "Counselling" value = "counselling" />
+		  <Picker.Item label = "Disability" value = "disability" />
+          <Picker.Item label = "Food Assistance" value = "food_assistance" />
+		  <Picker.Item label = "Funding & Wage Subsities" value = "funding_wage_subsidies" />
+		  <Picker.Item label = "Health & Wellness" value = "health_wellness" />
+		  <Picker.Item label = "Housing" value = "housing" />
+		  <Picker.Item label = "Indigenous" value = "indigenous" />
+		  <Picker.Item label = "International" value = "international" />
+		  <Picker.Item label = "LGBTQ2S+" value = "lgbtq2s+" />
+		  <Picker.Item label = "Legal Advice" value = "legal_advice" />
+		  <Picker.Item label = "Mental Health & Addictions" value = "mental_health_addictions" />
+		  <Picker.Item label = "Other" value = "other" />
+		  <Picker.Item label = "Sexualized Violence" value = "sexualized_violence" />
+		  <Picker.Item label = "Workplace Accessibility & Career Services" value = "workplace_accessibility_career_services" />
+        </Picker>
+      </View>
 
-        <View style={{height:50,borderTopColor:'lightgrey',borderTopWidth:2}}>
+
+        <View style={{height:50}}>
         
         </View>
     </View>
@@ -413,7 +419,7 @@ const styles = StyleSheet.create({
 
 
   mapView: {
-    flex: 1,
+    flex: 5,
     backgroundColor: 'white'
 
   },

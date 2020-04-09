@@ -194,7 +194,7 @@ filterMap(filter) {
       </View>
     </Modal>
 	
-	<View style={{height:50,borderBottomColor:'lightgrey',borderBottomWidth:2,flex:1}}>
+	<View style={{height:50,flex:1}}>
 	  
 		
 			<Dropdown
@@ -364,7 +364,7 @@ class CommunityScreen extends Component {
     return (
 
       <View style={styles.HomeScreen}>
-        <View style={{borderBottomColor:'lightgrey',borderBottomWidth:2,flex:1}}>
+        <View style={{flex:1}}>
         <View style={{height:20}}>
         
         </View>
@@ -399,7 +399,7 @@ class CommunityScreen extends Component {
                   this.setState({ image: data.image })
               }}>
 
-              <Text>{data.name}</Text>
+              <Text style={{ fontSize:20, color: '#003e51'}}>{data.name}</Text>
               <Image
                 source={{ uri: `${data.image}` }}
                 style={{ height: 200 }}
@@ -430,23 +430,22 @@ class CommunityScreen extends Component {
                     {email}
                     {`\n`}  
                   </Text>
-                  <Button 
-                    style={{backgroundColor: "#F194FF",
-                    borderRadius: 20,
-                    padding: 10,
-                    elevation: 2}}
-                    onPress={() => Linking.openURL(`http://${link}`)}
-                    title="Go There!"
-                  />
-                  <Button
-                    style={backgroundColor =  "#F194FF",
-                    borderRadius = 20,
-                    padding = 10,
-                    elevation = 2}
-                    onPress={() => this.toggleModal(false)}
-                    title="Exit"
-                  
-                  />               
+				  
+				  <TouchableHighlight
+				  style={{ ...styles.openButton}}
+				  onPress={() => Linking.openURL(`http://${link}`)}
+				>
+				  <Text style={styles.textStyle}>Go There!</Text>
+				</TouchableHighlight>
+				 
+				<TouchableHighlight
+				  style={{ ...styles.openButton}}
+				  onPress={() => this.toggleModal(false)}
+				>
+				  <Text style={styles.textStyle}>Close</Text>
+				</TouchableHighlight>
+				  
+				        
               </View>
             </View>
           </Modal>
@@ -457,20 +456,6 @@ class CommunityScreen extends Component {
 }
 
 
-
-
-
-function PreferencesScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <ScrollView>
-
-      </ScrollView>
-      <Text>Preferences</Text>
-    </View>
-  );
-}
-
 const Tab = createMaterialTopTabNavigator();
 
 export default function App() {
@@ -479,7 +464,6 @@ export default function App() {
       <Tab.Navigator tabBarPosition="bottom">
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Community" component={CommunityScreen} />
-        <Tab.Screen name="Preferences" component={PreferencesScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -552,7 +536,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   openButton: {
-    backgroundColor: "#F194FF",
+    backgroundColor: "#9ab7c1",
     borderRadius: 20,
     padding: 10,
     elevation: 2

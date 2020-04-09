@@ -181,7 +181,7 @@ filterMap(filter) {
           </Text>
           
           <TouchableHighlight
-              style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
+              style={{ ...styles.openButton}}
               onPress={() => {
                  this.setModalVisible(false);
               }}
@@ -364,7 +364,7 @@ class CommunityScreen extends Component {
     return (
 
       <View style={styles.HomeScreen}>
-        <View style={{flex:1}}>
+        <View>
         <View style={{height:20}}>
         
         </View>

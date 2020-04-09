@@ -145,8 +145,11 @@ filterMap(filter) {
     
     <View style={styles.HomeScreen}>
       
+      
       {/* testing the mapping function for the database */}
-     
+      <View style={{height:20}}>
+        
+        </View>
       <Modal
       animationType="slide"
       transparent={true}
@@ -155,18 +158,21 @@ filterMap(filter) {
       
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
-		<Image style={{width:100, height:100}} source={{uri: `${image}`}} />
+		<Image style={{width:500, height:100}} source={{uri: `${image}`}} />
           <Text style={styles.modalText}>
             
-            
+            {`\n`}
             {name}
             {"\n"}
+            {`\n`}
             {description}
             {"\n"}
+            {`\n`}
             {phonenumber}
             {`\n`}
-            {email}
             {`\n`}
+            {email}
+    
 
           
 
@@ -180,7 +186,7 @@ filterMap(filter) {
                  this.setModalVisible(false);
               }}
             >
-              <Text style={styles.textStyle}>Hide Modal</Text>
+              <Text style={styles.textStyle}>Close</Text>
             </TouchableHighlight>
 
           
@@ -196,7 +202,11 @@ filterMap(filter) {
 				data={data}
 				dropdownPosition = {0}
 				itemCount={6}
-				onChangeText={this.updateFilter}
+        onChangeText={this.updateFilter}
+        baseColor = "#003e51"
+        itemColor = "#003e51"
+        selectedItemColor = "#003e51"
+        textColor = "#00b0b9"
 			/>
 		
         
@@ -250,9 +260,7 @@ filterMap(filter) {
        
       </MapView>
 
-        <View style={{height:50}}>
         
-        </View>
     </View>
   );
 }
@@ -335,34 +343,46 @@ class CommunityScreen extends Component {
 
   render() {
     const { array, name, link, description, image, email } = this.state;
+
+    let data = [{
+      label: "All" , value: "all" },{
+      label: "Academic Accessibility & Supports" , value: "academic_accessibility_supports" },{
+      label: "Counselling" , value: "counselling" },{
+      label: "Disability" , value: "disability" },{
+      label: "Food Assistance" , value: "food_assistance" },{
+      label: "Funding & Wage Subsities" , value: "funding_wage_subsidies" },{
+      label: "Health & Wellness" , value: "health_wellness" },{
+      label: "Housing" , value: "housing" },{
+      label: "Indigenous" , value: "indigenous" },{
+      label: "International" , value: "international" },{
+      label: "LGBTQ2S+" , value: "lgbtq2s+" },{
+      label: "Legal Advice" , value: "legal_advice" },{
+      label: "Mental Health & Addictions" , value: "mental_health_addictions" },{
+      label: "Other" , value: "other" },{
+      label: "Sexualized Violence" , value: "sexualized_violence" },{
+      label: "Workplace Accessibility & Career Services" , value: "workplace_accessibility_career_services" }];
     return (
 
       <View style={styles.HomeScreen}>
-        <View style={{ height: 50, borderBottomColor: 'lightgrey', borderBottomWidth: 2 }}>
-          <Picker
-            selectedValue={this.state.filter}
-            onValueChange={this.updateFilter}
-          >
-            <Picker.Item label="All" value="all" />
-            <Picker.Item label="Academic Accessibility & Supports" value="academic_accessibility_supports" />
-            <Picker.Item label="Counselling" value="counselling" />
-            <Picker.Item label="Disability" value="disability" />
-            <Picker.Item label="Food Assistance" value="food_assistance" />
-            <Picker.Item label="Funding & Wage Subsities" value="funding_wage_subsidies" />
-            <Picker.Item label="Health & Wellness" value="health_wellness" />
-            <Picker.Item label="Housing" value="housing" />
-            <Picker.Item label="Indigenous" value="indigenous" />
-            <Picker.Item label="International" value="international" />
-            <Picker.Item label="LGBTQ2S+" value="lgbtq2s+" />
-            <Picker.Item label="Legal Advice" value="legal_advice" />
-            <Picker.Item label="Mental Health & Addictions" value="mental_health_addictions" />
-            <Picker.Item label="Other" value="other" />
-            <Picker.Item label="Sexualized Violence" value="sexualized_violence" />
-            <Picker.Item label="Workplace Accessibility & Career Services" value="workplace_accessibility_career_services" />
-          </Picker>
-
-
+        <View style={{borderBottomColor:'lightgrey',borderBottomWidth:2,flex:1}}>
+        <View style={{height:20}}>
+        
         </View>
+		
+    <Dropdown
+      label='Community Filter'
+      data={data}
+      dropdownPosition = {0}
+      itemCount={6}
+      baseColor = "#003e51"
+      itemColor = "#003e51"
+      selectedItemColor = "#003e51"
+      textColor = "#00b0b9"
+      onChangeText={this.updateFilter}
+    />
+  
+      
+    </View>
 
         <ScrollView>
 
@@ -400,7 +420,9 @@ class CommunityScreen extends Component {
               
                   <Image style={{ width: 100, height: 100 }} source={{ uri: `${image}` }} />
                   <Text style={styles.modalText}>
+                    {"\n"}
                     {name}                    
+                    {"\n"}
                     {"\n"}
                     {description}
                     {"\n"}
@@ -409,12 +431,18 @@ class CommunityScreen extends Component {
                     {`\n`}  
                   </Text>
                   <Button 
-                    style={{color: 'blue'}}
+                    style={{backgroundColor: "#F194FF",
+                    borderRadius: 20,
+                    padding: 10,
+                    elevation: 2}}
                     onPress={() => Linking.openURL(`http://${link}`)}
                     title="Go There!"
                   />
                   <Button
-                    style={{color: 'green'}}
+                    style={backgroundColor =  "#F194FF",
+                    borderRadius = 20,
+                    padding = 10,
+                    elevation = 2}
                     onPress={() => this.toggleModal(false)}
                     title="Exit"
                   
@@ -467,7 +495,7 @@ const styles = StyleSheet.create({
     right: 0,
   },
   body: {
-    backgroundColor: Colors.white,
+    backgroundColor: "#003e51",
   },
   centeredView: {
     flex: 1,
@@ -477,7 +505,7 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
-    backgroundColor: "white",
+    backgroundColor: '#FFFFFF',
     borderRadius: 20,
     padding: 35,
     alignItems: "center",
@@ -504,7 +532,7 @@ const styles = StyleSheet.create({
     color: Colors.black,
   },
   container: {
-      height: 500,
+      height: 250,
    },
   sectionDescription: {
     marginTop: 8,
@@ -523,6 +551,12 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+  openButton: {
+    backgroundColor: "#F194FF",
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2
+  },
   tabBar: {
     flex:0.2,
     flexDirection: 'row',
@@ -531,6 +565,7 @@ const styles = StyleSheet.create({
     borderTopColor: 'lightgrey',
     borderTopWidth:2
   },
+ 
 
 
   mapView: {

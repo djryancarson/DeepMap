@@ -17,12 +17,14 @@ import {
   Text,
   StatusBar,
   Button,
-  Picker
-} from 'react-native';
+  Picker,
+  TouchableOpacity,
+  Image,
+  Linking
+  } from 'react-native';
 
 import {
   Header,
-  Image,
   LearnMoreLinks,
   Colors,
   DebugInstructions,
@@ -79,37 +81,8 @@ class HomeScreen extends Component
     username.once('value').then((snapshot) => {
       this.setState({username: snapshot.val()});
     });
-    // }).catch(() => {
-    //   this.setState({username: 'GOOF'});
-    // });
-    // username.once('value', function(snapshot){
-    //   this.setState({username: snapshot.val()});
-    // })
   }
-  
-//   test() {
-  
-//     var nameid = firebase.database().ref("leads").orderByKey();
-//     nameid.once("value").then(function(snapshot) {
-//       var array = [];
-//       snapshot.forEach(function(childSnapshot) {
-        
-//         var childData = childSnapshot.val();
-//         array.push(childData);
-//       });
-//       this.setState({ array: array});
-//     });
 
-
-
-
-
-
-//     // nameid.once('value').then((snapshot) => {
-//     // this.setState({array: snapshot.val()});
-    
-//   // });
-// }
 
 // function that will make an array for firebase objects in this case the children of the tree leads
 test() {
@@ -120,7 +93,7 @@ test() {
     snapshot.forEach(childSnapshot =>  {
       
       var childData = childSnapshot.val();
-      array.push(childData);
+      if(!childData.vrtl){array.push(childData)};
     });
     this.setState({ array: array});
   });
@@ -137,7 +110,7 @@ filterMap(filter) {
       
       var childData = childSnapshot.val();
 	  var childFilter = childSnapshot.child("categories/" + filter).val();
-	  if(childFilter || filter == "all"){array.push(childData);}
+	  if(childFilter || filter == "all"){ if(!childData.vrtl){array.push(childData);}}
     });
     this.setState({ array: array});
   });
@@ -243,33 +216,6 @@ filterMap(filter) {
          
          ))}  
        
-
-       
-       
-        {/* <MapView.Marker
-            coordinate={{latitude: 50.6710194,
-            longitude: -120.3651759}}
-            title={"TRU Wellness Center"}
-            description={"Provided for: Students, TRU Faculty"}
-         />
-        <MapView.Marker
-            coordinate={{latitude: 50.6761238,
-            longitude: -120.3408698}}
-            title={"Kamloops Sexual Assault Counselling Centre"}
-            description={"Provided for: Students, TRU Faculty, Employers"}
-         />
-		 <MapView.Marker
-            coordinate={{latitude: 50.6746966,
-            longitude: -120.3262037}}
-            title={"Volunteer Kamloops"}
-            description={"Provided for: Students, TRU Faculty, Employers"}
-         />
-		 <MapView.Marker
-            coordinate={{latitude: 50.6916131,
-            longitude: -120.3608894}}
-            title={"Kamloops Immigrant Services"}
-            description={"Provided for: Students, TRU Faculty, Employers"}
-         /> */}
       </MapView>
 
       <View style={{flex:1}}>
@@ -309,13 +255,178 @@ filterMap(filter) {
 }
 
 
-function CommunityScreen() {
-  return (
-    <ScrollView>
-      <List />
-    </ScrollView>
-  );
+class CommunityScreen extends Component {
+  updateFilter = (filter) => {
+    this.setState({ filter: filter })
+    this.filterMap(filter);
+  }
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      username: 'ANON',
+      count: 3,
+      name: 'peter', //this.props.name
+      array: [],
+      filter: 'all',
+      modalVisible: false,
+      modalData: ""
+    };
+    //this.getUsername = this.getUsername.bind(this);
+  }
+  componentDidMount() {
+    this.getUsername();
+    this.test();
+  }
+
+  getUsername() {
+    var clientID = "-M11lAGgApvZ4Jb_2fZk";
+    var username = firebase.database().ref('/leads/' + clientID + '/email');
+    username.once('value').then((snapshot) => {
+      this.setState({ username: snapshot.val() });
+    });
+  }
+
+  test() {
+
+    var nameid = firebase.database().ref("community_resources").orderByKey();
+    nameid.once("value").then(snapshot => {
+      var array = []
+      snapshot.forEach(childSnapshot => {
+        
+        var childData = childSnapshot.val();
+
+        if(childData.vrtl){
+        array.push(childData);
+        }
+
+      });
+      this.setState({ array: array });
+    });
+  }
+
+  filterMap(filter) {
+    var nameid = firebase.database().ref("community_resources").orderByKey();
+    nameid.once("value").then(snapshot => {
+      var array = []
+      snapshot.forEach(childSnapshot => {
+
+        var childData = childSnapshot.val();
+        var childFilter = childSnapshot.child("categories/" + filter).val();
+        if (childFilter || filter == "all") { if(childData.vrtl){array.push(childData);} }
+      });
+      this.setState({ array: array });
+    });
+
+  }
+  toggleModal(visible) {
+    this.setState({ modalVisible: visible });
+  }
+  modalData(data) {
+
+    this.setState({ Data: JSON.stringify(data) });
+  }
+
+
+  render() {
+    const { array, name, link, description, image, email } = this.state;
+    return (
+
+      <View style={styles.HomeScreen}>
+        <View style={{ height: 50, borderBottomColor: 'lightgrey', borderBottomWidth: 2 }}>
+          <Picker
+            selectedValue={this.state.filter}
+            onValueChange={this.updateFilter}
+          >
+            <Picker.Item label="All" value="all" />
+            <Picker.Item label="Academic Accessibility & Supports" value="academic_accessibility_supports" />
+            <Picker.Item label="Counselling" value="counselling" />
+            <Picker.Item label="Disability" value="disability" />
+            <Picker.Item label="Food Assistance" value="food_assistance" />
+            <Picker.Item label="Funding & Wage Subsities" value="funding_wage_subsidies" />
+            <Picker.Item label="Health & Wellness" value="health_wellness" />
+            <Picker.Item label="Housing" value="housing" />
+            <Picker.Item label="Indigenous" value="indigenous" />
+            <Picker.Item label="International" value="international" />
+            <Picker.Item label="LGBTQ2S+" value="lgbtq2s+" />
+            <Picker.Item label="Legal Advice" value="legal_advice" />
+            <Picker.Item label="Mental Health & Addictions" value="mental_health_addictions" />
+            <Picker.Item label="Other" value="other" />
+            <Picker.Item label="Sexualized Violence" value="sexualized_violence" />
+            <Picker.Item label="Workplace Accessibility & Career Services" value="workplace_accessibility_career_services" />
+          </Picker>
+
+
+        </View>
+
+        <ScrollView>
+
+          {array.map((data) => (
+            <TouchableOpacity
+              key={data.name}
+              style={styles.container}
+              onPress={() => {
+                this.toggleModal(true),
+                  this.setState({ name: data.name }),
+                  this.setState({ link: data.link }),
+                  this.setState({email: data.email})
+                  this.setState({ description: data.description }),
+                  this.setState({ image: data.image })
+              }}>
+
+              <Text>{data.name}</Text>
+              <Image
+                source={{ uri: `${data.image}` }}
+                style={{ height: 200 }}
+              />
+            </TouchableOpacity>
+          ))
+        
+          }
+          <Modal
+            animationType="slide"
+            transparent={true}
+            visible={this.state.modalVisible}
+          >
+
+            <View style={styles.centeredView}>
+              <View style={styles.modalView}>
+              
+              
+                  <Image style={{ width: 100, height: 100 }} source={{ uri: `${image}` }} />
+                  <Text style={styles.modalText}>
+                    {name}                    
+                    {"\n"}
+                    {description}
+                    {"\n"}
+                    {`\n`}
+                    {email}
+                    {`\n`}  
+                  </Text>
+                  <Button 
+                    style={{color: 'blue'}}
+                    onPress={() => Linking.openURL(`http://${link}`)}
+                    title="Go There!"
+                  />
+                  <Button
+                    style={{color: 'green'}}
+                    onPress={() => this.toggleModal(false)}
+                    title="Exit"
+                  
+                  />               
+              </View>
+            </View>
+          </Modal>
+        </ScrollView>
+      </View>
+    )
+  }
 }
+
+
+
+
 
 function PreferencesScreen() {
   return (

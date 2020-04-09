@@ -32,7 +32,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import { createStackNavigator } from '@react-navigation/stack';
-    
+import { Dropdown } from 'react-native-material-dropdown';
 
 import List from './VirtualCommunitiesList';
 
@@ -122,6 +122,25 @@ filterMap(filter) {
   render () 
 {
   const {count, username, name, array, modalVisible,description, phonenumber, email, image} = this.state;
+  
+  let data = [{
+          label: "All" , value: "all" },{
+          label: "Academic Accessibility & Supports" , value: "academic_accessibility_supports" },{
+          label: "Counselling" , value: "counselling" },{
+		  label: "Disability" , value: "disability" },{
+          label: "Food Assistance" , value: "food_assistance" },{
+		  label: "Funding & Wage Subsities" , value: "funding_wage_subsidies" },{
+		  label: "Health & Wellness" , value: "health_wellness" },{
+		  label: "Housing" , value: "housing" },{
+		  label: "Indigenous" , value: "indigenous" },{
+		  label: "International" , value: "international" },{
+		  label: "LGBTQ2S+" , value: "lgbtq2s+" },{
+		  label: "Legal Advice" , value: "legal_advice" },{
+		  label: "Mental Health & Addictions" , value: "mental_health_addictions" },{
+		  label: "Other" , value: "other" },{
+		  label: "Sexualized Violence" , value: "sexualized_violence" },{
+		  label: "Workplace Accessibility & Career Services" , value: "workplace_accessibility_career_services" }];
+		  
   return (
     
     <View style={styles.HomeScreen}>
@@ -136,6 +155,7 @@ filterMap(filter) {
       
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
+		<Image style={{width:100, height:100}} source={{uri: `${image}`}} />
           <Text style={styles.modalText}>
             
             
@@ -147,8 +167,6 @@ filterMap(filter) {
             {`\n`}
             {email}
             {`\n`}
-            {image}
-            {/* <Image source={{uri: `${image}`}} /> */}
 
           
 
@@ -169,6 +187,20 @@ filterMap(filter) {
         </View>
       </View>
     </Modal>
+	
+	<View style={{height:50,borderBottomColor:'lightgrey',borderBottomWidth:2,flex:1}}>
+	  
+		
+			<Dropdown
+				label='Community Filter'
+				data={data}
+				dropdownPosition = {0}
+				itemCount={6}
+				onChangeText={this.updateFilter}
+			/>
+		
+        
+      </View>
       
       <MapView  
         style= {styles.mapView}
@@ -217,34 +249,6 @@ filterMap(filter) {
          ))}  
        
       </MapView>
-
-      <View style={{flex:1}}>
-	  
-    <Text>
-    </Text>
-        <Picker
-			selectedValue={this.state.filter}
-			onValueChange={this.updateFilter}
-		>
-          <Picker.Item label = "All" value = "all" />
-          <Picker.Item label = "Academic Accessibility & Supports" value = "academic_accessibility_supports" />
-          <Picker.Item label = "Counselling" value = "counselling" />
-		  <Picker.Item label = "Disability" value = "disability" />
-          <Picker.Item label = "Food Assistance" value = "food_assistance" />
-		  <Picker.Item label = "Funding & Wage Subsities" value = "funding_wage_subsidies" />
-		  <Picker.Item label = "Health & Wellness" value = "health_wellness" />
-		  <Picker.Item label = "Housing" value = "housing" />
-		  <Picker.Item label = "Indigenous" value = "indigenous" />
-		  <Picker.Item label = "International" value = "international" />
-		  <Picker.Item label = "LGBTQ2S+" value = "lgbtq2s+" />
-		  <Picker.Item label = "Legal Advice" value = "legal_advice" />
-		  <Picker.Item label = "Mental Health & Addictions" value = "mental_health_addictions" />
-		  <Picker.Item label = "Other" value = "other" />
-		  <Picker.Item label = "Sexualized Violence" value = "sexualized_violence" />
-		  <Picker.Item label = "Workplace Accessibility & Career Services" value = "workplace_accessibility_career_services" />
-        </Picker>
-      </View>
-
 
         <View style={{height:50}}>
         
@@ -530,7 +534,7 @@ const styles = StyleSheet.create({
 
 
   mapView: {
-    flex: 5,
+    flex: 8,
     backgroundColor: 'white'
 
   },

@@ -1,3 +1,7 @@
+# Analysis
+
+The analysis of the problem gave us many different approaches we could take. Since this product was already available on a webpage, we could have easily took that webpage and just made it display within a mobile app. We decided against this approach, opting to create our own mobile application not only for the flexibility and iteration that we could do with the final product, but also so that we could gain experience as developers to solve a common problem in the industry right now which is how we can create a cross-platform mobile app that maintains a consistent look and feel. We also had a few options to approach the solution to content management. We opted to create a webpage for our client, as that would allow her to manage the database on any device. While this did expand the scope of the project as a whole, it gave us a better glimpse into what true system design looks like in practice.
+
 # Initial Analysis
 
 * Best Mobile development platform for us would be React Native

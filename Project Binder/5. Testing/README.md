@@ -1,0 +1,4 @@
+# Testing
+
+For this project, our testing plan was quite simple. Unlike a complex product such as a machine learning product, our final product was rather simple, so we simply focused on making sure our app and the client website remained stable and reliable under different use cases. To illustrate the different use cases and feature set working under different conditions, we have included two demonstration videos to our Project Binder on our GitHub page. These demonstration videos are located at [https://github.com/djryancarson/DeepMap/tree/master/Project%20Binder/5.%20Testing](https://github.com/djryancarson/DeepMap/tree/master/Project Binder/5. Testing). While there is a bit of lag with the demonstration video for the app, this is caused by the software used to capture the footage and is not reflective of the final product.
+

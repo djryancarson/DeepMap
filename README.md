@@ -70,4 +70,16 @@ The **ios** and **android** folders hold the project files for the iOS and Andro
 
 ​	Initial Project Developer
 
-​	ryantannercarson@tru.ca
+​	ryantannercarson@gmail.com
+
+### Dyson Fraser
+
+​	Initial Project Developer
+
+​	dysonfraser@gmail.com
+
+### Tyrel Froese
+
+​	Initial Project Developer
+
+​	froeset17@gmail.com

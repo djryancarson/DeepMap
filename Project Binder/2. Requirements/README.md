@@ -1,3 +1,7 @@
+# Requirements
+
+For this project, the requirements were rather simple from a client deliverable perspective. She simply wanted an app to do all of the functionality available currently on the DeepMap Website. While the deliverables seemed easy, the requirement to have the app present on both Android and iOS presented some unique challenges in terms of technical requirements. In addition, we also had to consider how our client would manage the content on the app itself.
+
 # Initial Requirements
 
 * Develop a mobile app with the same features as the [Deep Map Website](https://access.trubox.ca/)

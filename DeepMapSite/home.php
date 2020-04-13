@@ -30,7 +30,7 @@
          <hr>
         </div><br>
     
-         
+        //The form that shows up when Add New is clicked or when the edit button is clicked on any of the resources. The same form for both is used
         <div id="newresourceform">
         
         <h2>Add/Edit Resource</h2>
@@ -43,6 +43,7 @@
         <label for="link">Link:</label><br>
         <input type="text" id="addLink" name="link"><br><br>
         
+		//if the resource type is virtual, then this section becomes invisible
         <div id="notVirtualApplicableFields">
   		  <label id="phoneLabel" for="phone">Phone:</label><br>
           <input type="text" id="addResourcePhone" name="phone"><br><br>
@@ -120,6 +121,7 @@
         <label for="description">Description:</label><br>
         <textarea id="addDescription" name="description"></textarea><br><br>        
         
+		//this section also becomes invisible if the resource is virtual
         <div id="notVirtualApplicableFields2">
           <label id="coordinatesLabel" for="coordinates">Location</label><br>
           <input type="text" id="addlocation" name="coordinates"><br><br>
@@ -167,7 +169,8 @@
    			console.log(snapshot.val());
             
             var community_resources_data = snapshot.val();
-                       
+            
+			//goes through each item in the database creating an HTML DOM structure out of each to be displayed on the page
         	for (var key in community_resources_data) {
                 
                 //append all data from community resources "table"
@@ -237,7 +240,7 @@
         }
         
         
-        
+        //this function is used for both editing and adding a resource. If editing, the HTML element passes the key value which is used to update the already existingresource. Otherwise a new key is generated and used for the new resource
         function AddResource() {
         
         	if(document.getElementById('addResourceName').value == ""){
@@ -465,6 +468,7 @@
     
     
     //could change this to filter by a type value rather than just a true or false value in the future
+	//hides fetches all elements and hides or shows them depending on filter setting
     function ApplyFilter(filterBy) {
       
      var phys = document.getElementsByClassName('isVirtual-false');
@@ -503,7 +507,7 @@
     }
     
     
-    
+    //makes current resources list disappear and add/edit form appear
     function AddNew(){
       document.getElementById("Resources").style.display = 'none';
       document.getElementById("newresourceform").style.display = 'inline-block';

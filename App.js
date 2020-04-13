@@ -34,7 +34,6 @@ import {
 import { createStackNavigator } from '@react-navigation/stack';
 import { Dropdown } from 'react-native-material-dropdown';
 
-import List from './VirtualCommunitiesList';
 
 class HomeScreen extends Component
 {

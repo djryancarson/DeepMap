@@ -21,11 +21,13 @@ Note: this will often fail when trying to build the debug app. In our experience
 
 1. Move the **gradle.properties** file with the keystore info to `DeepMap\android`
 2. Move the **my-upload-key.keystore** to `DeepMap\android\app`
-3. Open a command line and navigate to the android folder of the project (`DeepMap\android`)
-4. Run `gradlew bundleRelease`
+3. Open a command line and navigate to the project folder 
+4. run `npm i`
+5. In the command line, navigate to the android folder of the project (`DeepMap\android`)
+6. Run `gradlew bundleRelease`
    * Note: the [Official Documentation](https://reactnative.dev/docs/signed-apk-android) advises to use `./gradlew bundleRelease`. In our experience, this does not work on a Windows Environment
-5. Navigate back to `DeepMap` and run `npx react-native run-android --variant=release`
-6. The release apk will be located at `DeepMap\android\app\build\outputs\apk\release`
+7. Navigate back to `DeepMap` and run `npx react-native run-android --variant=release`
+8. The release apk will be located at `DeepMap\android\app\build\outputs\apk\release`
 
 
 ### iOS build

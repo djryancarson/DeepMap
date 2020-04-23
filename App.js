@@ -50,10 +50,8 @@ class HomeScreen extends Component
     super(props);
     
     this.state = {
-      username: 'ANON',
-      count: 3,
-      name: 'peter', //this.props.name
-      array: [],//[1,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+      name: '', //this.props.name
+      array: [],
 	  filter: 'all',
     modalVisible: false,
     description: '',
@@ -120,7 +118,7 @@ filterMap(filter) {
 
   render () 
 {
-  const {count, username, name, array, modalVisible,description, phonenumber, email, image} = this.state;
+  const {username, name, array, modalVisible,description, phonenumber, email, image} = this.state;
   
   let data = [{
           label: "All" , value: "all" },{
@@ -276,15 +274,12 @@ class CommunityScreen extends Component {
     super(props);
 
     this.state = {
-      username: 'ANON',
-      count: 3,
-      name: 'peter', //this.props.name
+      name: '', //this.props.name
       array: [],
       filter: 'all',
       modalVisible: false,
       modalData: ""
     };
-    //this.getUsername = this.getUsername.bind(this);
   }
   componentDidMount() {
     this.getUsername();
@@ -559,7 +554,6 @@ const styles = StyleSheet.create({
   HomeScreen: {
     flex:1,
     flexDirection: 'column',
-    //height: 1000
   },
 
   scrollView: {
